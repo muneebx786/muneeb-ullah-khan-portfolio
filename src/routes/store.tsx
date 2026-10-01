@@ -154,7 +154,7 @@ function StorePage() {
   const changeQty = (id: string, delta: number) =>
     setCart((c) => {
       const next = { ...c, [id]: (c[id] ?? 0) + delta };
-      if (next[id] <= 0) delete next[id];
+      if ((next[id] ?? 0) <= 0) delete next[id];
       return next;
     });
   const removeItem = (id: string) =>

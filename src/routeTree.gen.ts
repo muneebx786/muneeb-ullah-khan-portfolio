@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgencyRouteImport } from './routes/agency'
 import { Route as FreshnestRouteImport } from './routes/freshnest'
 import { Route as RestaurantRouteImport } from './routes/restaurant'
 import { Route as StoreRouteImport } from './routes/store'
@@ -17,6 +18,11 @@ import { Route as StoreRouteImport } from './routes/store'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgencyRoute = AgencyRouteImport.update({
+  id: '/agency',
+  path: '/agency',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FreshnestRoute = FreshnestRouteImport.update({
@@ -37,12 +43,14 @@ const StoreRoute = StoreRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agency': typeof AgencyRoute
   '/freshnest': typeof FreshnestRoute
   '/restaurant': typeof RestaurantRoute
   '/store': typeof StoreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agency': typeof AgencyRoute
   '/freshnest': typeof FreshnestRoute
   '/restaurant': typeof RestaurantRoute
   '/store': typeof StoreRoute
@@ -50,20 +58,22 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agency': typeof AgencyRoute
   '/freshnest': typeof FreshnestRoute
   '/restaurant': typeof RestaurantRoute
   '/store': typeof StoreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/freshnest' | '/restaurant' | '/store'
+  fullPaths: '/' | '/agency' | '/freshnest' | '/restaurant' | '/store'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/freshnest' | '/restaurant' | '/store'
-  id: '__root__' | '/' | '/freshnest' | '/restaurant' | '/store'
+  to: '/' | '/agency' | '/freshnest' | '/restaurant' | '/store'
+  id: '__root__' | '/' | '/agency' | '/freshnest' | '/restaurant' | '/store'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgencyRoute: typeof AgencyRoute
   FreshnestRoute: typeof FreshnestRoute
   RestaurantRoute: typeof RestaurantRoute
   StoreRoute: typeof StoreRoute
@@ -76,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agency': {
+      id: '/agency'
+      path: '/agency'
+      fullPath: '/agency'
+      preLoaderRoute: typeof AgencyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/freshnest': {
@@ -104,6 +121,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgencyRoute: AgencyRoute,
   FreshnestRoute: FreshnestRoute,
   RestaurantRoute: RestaurantRoute,
   StoreRoute: StoreRoute,

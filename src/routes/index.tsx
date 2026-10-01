@@ -46,7 +46,7 @@ const focusAreas = [
   },
 ];
 
-const planned = ["Marketing Agency Website"];
+
 
 function HeroVisual() {
   const steps = ["Research", "Outreach", "Connect"];
@@ -221,14 +221,13 @@ function Index() {
               <Link to="/restaurant" className="group mt-7 inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent-foreground">View Demo <ArrowRight className="h-4 w-4" /></Link>
             </div>
           </article>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {planned.map((t) => (
-              <article key={t} className="rounded-xl border border-dashed bg-card p-6">
-                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Planned</span>
-                <h3 className="mt-3 font-semibold">{t}</h3>
-              </article>
-            ))}
-          </div>
+          <article className="mt-6 rounded-xl border bg-card p-8 shadow-soft md:p-10">
+            <span className="inline-flex rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">Concept Project</span>
+            <h3 className="mt-5 text-2xl font-bold">FORM &amp; FIELD — Creative Agency</h3>
+            <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">A creative agency website concept featuring service exploration, filterable project showcases, and an interactive inquiry demo.</p>
+            <p className="mt-3 text-sm text-muted-foreground">Fictional agency and sample projects. The inquiry form does not send or store information.</p>
+            <Link to="/agency" className="group mt-7 inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent-foreground">View Demo <ArrowRight className="h-4 w-4" /></Link>
+          </article>
         </div>
       </section>
 

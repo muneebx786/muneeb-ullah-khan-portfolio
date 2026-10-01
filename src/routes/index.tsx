@@ -1,21 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Code2, Workflow, Target, ArrowRight } from "lucide-react";
+import { Code2, Brain, Target, ArrowRight } from "lucide-react";
 import { Nav, scrollToSection, sections } from "@/components/portfolio/Nav";
 import freshnestShot from "@/assets/freshnest-screenshot.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Muneeb Ullah Khan — Thoughtful websites. Practical AI solutions." },
+      { title: "Muneeb Ullah Khan — Web Developer | Client Acquisition | Aspiring AI Professional" },
       {
         name: "description",
         content:
-          "Portfolio of Muneeb Ullah Khan: web development, AI-powered workflows, and client acquisition.",
+          "Portfolio of Muneeb Ullah Khan: web development, client acquisition, and a growing interest in artificial intelligence.",
       },
-      { property: "og:title", content: "Muneeb Ullah Khan — Thoughtful websites. Practical AI solutions." },
+      {
+        property: "og:title",
+        content: "Muneeb Ullah Khan — Web Developer | Client Acquisition | Aspiring AI Professional",
+      },
       {
         property: "og:description",
-        content: "Developing websites, exploring AI-powered workflows, and building skills in client acquisition.",
+        content:
+          "Building websites, developing client acquisition skills, and learning about artificial intelligence.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

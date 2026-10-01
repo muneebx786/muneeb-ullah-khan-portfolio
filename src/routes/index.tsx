@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Code2, Bot, Target, ArrowRight } from "lucide-react";
 import { Nav, scrollToSection } from "@/components/portfolio/Nav";
 
@@ -45,10 +45,12 @@ const focusAreas = [
   },
 ];
 
-const projects = [
+const projects: { title: string; body: string; to?: "/freshnest"; live?: boolean }[] = [
   {
-    title: "Service Business Website",
-    body: "A planned multi-section website for a local service business, focused on clear structure and responsive layout.",
+    title: "FreshNest Cleaning — Service Business Website",
+    body: "A concept website for a fictional home-cleaning business: services, process, FAQs and a demo quote request form.",
+    to: "/freshnest",
+    live: true,
   },
   {
     title: "Lead Inquiry Automation",
@@ -168,21 +170,39 @@ function Index() {
           <h2 className="text-3xl font-bold md:text-4xl">Projects</h2>
           <div className="mt-4 h-1 w-14 rounded-full bg-primary" />
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            These are planned portfolio projects &mdash; none of them are finished yet. Each card
-            describes what I intend to build, and I&rsquo;ll replace it with the real work once
-            it&rsquo;s done.
+            Concept projects built to demonstrate layout, structure and interaction. Cards marked
+            &ldquo;Coming Soon&rdquo; describe work that is still planned.
           </p>
           <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {projects.map((p) => (
               <article
                 key={p.title}
-                className="rounded-2xl border border-dashed bg-background/60 p-8 transition-colors hover:border-primary/40"
+                className={`rounded-2xl border p-8 transition-colors ${
+                  p.live
+                    ? "bg-card shadow-soft hover:border-primary/40"
+                    : "border-dashed bg-background/60 hover:border-primary/40"
+                }`}
               >
-                <span className="inline-flex items-center rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Coming Soon
+                <span
+                  className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider ${
+                    p.live
+                      ? "bg-accent text-accent-foreground"
+                      : "bg-muted text-muted-foreground"
+                  }`}
+                >
+                  {p.live ? "Live Demo" : "Coming Soon"}
                 </span>
                 <h3 className="mt-5 text-lg font-semibold">{p.title}</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{p.body}</p>
+                {p.to && (
+                  <Link
+                    to={p.to}
+                    className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
+                  >
+                    View live demo
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                )}
               </article>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Code2, Brain, Target, ArrowRight } from "lucide-react";
+import { Code2, Brain, Target, ArrowRight, Mail, Linkedin } from "lucide-react";
 import { Nav, scrollToSection, sections } from "@/components/portfolio/Nav";
 import freshnestShot from "@/assets/freshnest-screenshot.jpg";
 
@@ -206,8 +206,30 @@ function Index() {
       <section id="contact" className="scroll-mt-14 border-t px-6 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contact</p>
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">Get in touch</h2>
-          <p className="mt-6 text-lg text-muted-foreground">Contact details will be added soon.</p>
+          <h2 className="mt-3 text-3xl font-bold md:text-4xl">Let&rsquo;s Discuss Your Project</h2>
+          <p className="mt-6 text-lg text-muted-foreground">
+            For website projects and client acquisition enquiries, connect with me by email or
+            LinkedIn.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="mailto:muneebfeb03@gmail.com"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent-foreground sm:w-auto"
+            >
+              <Mail className="h-4 w-4" />
+              Email Me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/muneeb-ullah-khan-41b391375/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-navy-line px-6 py-3 text-sm font-semibold transition-colors hover:border-navy-muted sm:w-auto"
+            >
+              <Linkedin className="h-4 w-4" />
+              Connect on LinkedIn
+            </a>
+          </div>
+          <p className="mt-8 break-all text-sm text-muted-foreground">muneebfeb03@gmail.com</p>
         </div>
       </section>
 

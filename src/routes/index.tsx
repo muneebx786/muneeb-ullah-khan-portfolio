@@ -95,14 +95,14 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[1.2fr_1fr]">
           <div>
             <p className="reveal text-xs font-semibold uppercase tracking-[0.2em] text-teal-light">
-              Web Development · AI &amp; Automation
+              Web Developer | Client Acquisition | Aspiring AI Professional
             </p>
             <h1 className="reveal mt-5 text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl">
-              Thoughtful websites. Practical AI solutions.
+              Building Websites. Connecting Businesses.
             </h1>
             <p className="reveal mt-6 max-w-xl text-lg leading-relaxed text-navy-muted">
-              I&rsquo;m Muneeb Ullah Khan, developing websites, exploring AI-powered workflows, and building
-              practical skills in client acquisition.
+              I&rsquo;m Muneeb Ullah Khan, focused on web development and client acquisition, with a
+              growing interest in artificial intelligence.
             </p>
             <div className="reveal mt-10 flex flex-wrap gap-3">
               <button

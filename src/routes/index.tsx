@@ -1,21 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Code2, Workflow, Target, ArrowRight } from "lucide-react";
+import { Code2, Brain, Target, ArrowRight } from "lucide-react";
 import { Nav, scrollToSection, sections } from "@/components/portfolio/Nav";
 import freshnestShot from "@/assets/freshnest-screenshot.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Muneeb Ullah Khan — Thoughtful websites. Practical AI solutions." },
+      { title: "Muneeb Ullah Khan — Web Developer | Client Acquisition | Aspiring AI Professional" },
       {
         name: "description",
         content:
-          "Portfolio of Muneeb Ullah Khan: web development, AI-powered workflows, and client acquisition.",
+          "Portfolio of Muneeb Ullah Khan: web development, client acquisition, and a growing interest in artificial intelligence.",
       },
-      { property: "og:title", content: "Muneeb Ullah Khan — Thoughtful websites. Practical AI solutions." },
+      {
+        property: "og:title",
+        content: "Muneeb Ullah Khan — Web Developer | Client Acquisition | Aspiring AI Professional",
+      },
       {
         property: "og:description",
-        content: "Developing websites, exploring AI-powered workflows, and building skills in client acquisition.",
+        content:
+          "Building websites, developing client acquisition skills, and learning about artificial intelligence.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,15 +29,23 @@ export const Route = createFileRoute("/")({
 });
 
 const focusAreas = [
-  { icon: Code2, title: "Web Development", body: "Building responsive websites and landing pages with clear structure and readable layouts." },
-  { icon: Workflow, title: "AI & Automation", body: "Exploring AI integrations and workflows that take over repetitive, manual steps." },
-  { icon: Target, title: "Client Acquisition & Lead Generation", body: "Researching prospects and drafting personalised, relevant outreach." },
+  { icon: Code2, title: "Web Development", body: "Creating responsive websites and landing pages." },
+  {
+    icon: Target,
+    title: "Client Acquisition & Lead Generation",
+    body: "Researching potential clients and developing personalised outreach strategies.",
+  },
+  {
+    icon: Brain,
+    title: "Aspiring AI Professional",
+    body: "Learning AI concepts and exploring their practical applications.",
+  },
 ];
 
-const planned = ["E-commerce Store", "Restaurant Website", "Marketing Agency Website", "AI Inquiry Assistant"];
+const planned = ["E-commerce Store", "Restaurant Website", "Marketing Agency Website"];
 
 function HeroVisual() {
-  const steps = ["Inquiry", "Organise", "Respond"];
+  const steps = ["Research", "Outreach", "Connect"];
   return (
     <div aria-hidden className="relative mx-auto w-full max-w-md">
       <div className="rounded-xl border border-navy-line bg-navy p-4 shadow-soft">
@@ -83,14 +95,14 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[1.2fr_1fr]">
           <div>
             <p className="reveal text-xs font-semibold uppercase tracking-[0.2em] text-teal-light">
-              Web Development · AI &amp; Automation
+              Web Developer | Client Acquisition | Aspiring AI Professional
             </p>
             <h1 className="reveal mt-5 text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl">
-              Thoughtful websites. Practical AI solutions.
+              Building Websites. Connecting Businesses.
             </h1>
             <p className="reveal mt-6 max-w-xl text-lg leading-relaxed text-navy-muted">
-              I&rsquo;m Muneeb Ullah Khan, developing websites, exploring AI-powered workflows, and building
-              practical skills in client acquisition.
+              I&rsquo;m Muneeb Ullah Khan, focused on web development and client acquisition, with a
+              growing interest in artificial intelligence.
             </p>
             <div className="reveal mt-10 flex flex-wrap gap-3">
               <button
@@ -117,14 +129,15 @@ function Index() {
           <SectionHeading eyebrow="About" title="A practical approach to learning" />
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              I&rsquo;m interested in how websites, AI and automation can make everyday business tasks
-              simpler. I learn by building real projects &mdash; structuring layouts, writing clear
-              content, and checking how pages work on phones and large screens.
+              I&rsquo;m focused on web development and client acquisition. I learn by building real
+              projects &mdash; structuring layouts, writing clear content, and checking how pages work on
+              phones and large screens.
             </p>
             <p>
-              I&rsquo;m also exploring AI integrations and automated workflows, and studying lead
-              generation: understanding which businesses need a stronger online presence and how to
-              reach them with relevant, personal outreach. This site documents that work as it develops.
+              I&rsquo;m also studying client acquisition and lead generation: understanding which
+              businesses need a stronger online presence and how to reach them with relevant, personal
+              outreach. Alongside this, I&rsquo;m learning about artificial intelligence and how its
+              ideas can be applied in practice. This site documents that work as it develops.
             </p>
           </div>
         </div>

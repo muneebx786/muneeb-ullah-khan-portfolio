@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export const sections = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "expertise", label: "Expertise" },
-  { id: "projects", label: "Projects" },
+  { id: "about", label: "About Me" },
+  { id: "expertise", label: "Focus" },
+  { id: "projects", label: "Selected Projects" },
   { id: "contact", label: "Contact" },
 ];
 

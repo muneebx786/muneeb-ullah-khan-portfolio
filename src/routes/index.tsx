@@ -6,20 +6,20 @@ import freshnestShot from "@/assets/freshnest-screenshot.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Muneeb Ullah Khan — Web Developer | Client Acquisition | Aspiring AI Professional" },
+      { title: "Muneeb Ullah Khan — Web Developer | Lead Generation & Client Acquisition | Aspiring AI Professional" },
       {
         name: "description",
         content:
-          "Portfolio of Muneeb Ullah Khan: web development, client acquisition, and a growing interest in artificial intelligence.",
+          "Portfolio of Muneeb Ullah Khan: responsive web development, lead generation and client acquisition, and a growing knowledge of artificial intelligence.",
       },
       {
         property: "og:title",
-        content: "Muneeb Ullah Khan — Web Developer | Client Acquisition | Aspiring AI Professional",
+        content: "Muneeb Ullah Khan — Web Developer | Lead Generation & Client Acquisition | Aspiring AI Professional",
       },
       {
         property: "og:description",
         content:
-          "Building websites, developing client acquisition skills, and learning about artificial intelligence.",
+          "Building digital experiences, creating business connections, and learning about artificial intelligence.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,16 +29,20 @@ export const Route = createFileRoute("/")({
 });
 
 const focusAreas = [
-  { icon: Code2, title: "Web Development", body: "Creating responsive websites and landing pages." },
+  {
+    icon: Code2,
+    title: "Web Development",
+    body: "Responsive websites and landing pages with clear navigation, thoughtful layouts, and user-friendly interfaces.",
+  },
   {
     icon: Target,
-    title: "Client Acquisition & Lead Generation",
-    body: "Researching potential clients and developing personalised outreach strategies.",
+    title: "Lead Generation & Client Acquisition",
+    body: "Targeted prospect research and personalised outreach to support meaningful business connections.",
   },
   {
     icon: Brain,
-    title: "Aspiring AI Professional",
-    body: "Learning AI concepts and exploring their practical applications.",
+    title: "Artificial Intelligence — Learning & Development",
+    body: "Building foundational AI knowledge and exploring practical applications through study and hands-on projects.",
   },
 ];
 
@@ -95,21 +99,21 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[1.2fr_1fr]">
           <div>
             <p className="reveal text-xs font-semibold uppercase tracking-[0.2em] text-teal-light">
-              Web Developer | Client Acquisition | Aspiring AI Professional
+              Web Developer | Lead Generation & Client Acquisition | Aspiring AI Professional
             </p>
             <h1 className="reveal mt-5 text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl">
-              Building Websites. Connecting Businesses.
+              Building Digital Experiences. Creating Business Connections.
             </h1>
             <p className="reveal mt-6 max-w-xl text-lg leading-relaxed text-navy-muted">
-              I&rsquo;m Muneeb Ullah Khan, focused on web development and client acquisition, with a
-              growing interest in artificial intelligence.
+              I focus on responsive web development, targeted lead research, and personalised
+              outreach, while expanding my knowledge of artificial intelligence.
             </p>
             <div className="reveal mt-10 flex flex-wrap gap-3">
               <button
                 onClick={() => scrollToSection("projects")}
                 className="group inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent-foreground"
               >
-                Explore My Work
+                Explore My Projects
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
               <button
@@ -126,18 +130,13 @@ function Index() {
 
       <section id="about" className="scroll-mt-14 px-6 py-20 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1fr_1.6fr]">
-          <SectionHeading eyebrow="About" title="A practical approach to learning" />
+          <SectionHeading eyebrow="About Me" title="A practical approach to learning" />
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              I&rsquo;m focused on web development and client acquisition. I learn by building real
-              projects &mdash; structuring layouts, writing clear content, and checking how pages work on
-              phones and large screens.
-            </p>
-            <p>
-              I&rsquo;m also studying client acquisition and lead generation: understanding which
-              businesses need a stronger online presence and how to reach them with relevant, personal
-              outreach. Alongside this, I&rsquo;m learning about artificial intelligence and how its
-              ideas can be applied in practice. This site documents that work as it develops.
+              My interests bring together technology and business development. I build practical
+              website projects, research prospective clients, and develop tailored outreach
+              approaches. Alongside this work, I am strengthening my understanding of artificial
+              intelligence through continuous learning.
             </p>
           </div>
         </div>
@@ -145,7 +144,7 @@ function Index() {
 
       <section id="expertise" className="scroll-mt-14 border-t px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <SectionHeading eyebrow="Expertise" title="Areas of focus" />
+          <SectionHeading eyebrow="Focus" title="Professional Focus" />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {focusAreas.map(({ icon: Icon, title, body }) => (
               <article key={title} className="rounded-xl border bg-card p-7 shadow-soft">
@@ -162,7 +161,7 @@ function Index() {
 
       <section id="projects" className="scroll-mt-14 border-t px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <SectionHeading eyebrow="Projects" title="Selected projects" />
+          <SectionHeading eyebrow="Projects" title="Selected Projects" />
           <article className="mt-12 grid overflow-hidden rounded-xl border bg-card shadow-soft md:grid-cols-2">
             <div className="border-b bg-muted md:border-b-0 md:border-r">
               <img

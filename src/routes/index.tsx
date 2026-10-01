@@ -45,10 +45,12 @@ const focusAreas = [
   },
 ];
 
-const projects = [
+const projects: { title: string; body: string; to?: "/freshnest"; live?: boolean }[] = [
   {
-    title: "Service Business Website",
-    body: "A planned multi-section website for a local service business, focused on clear structure and responsive layout.",
+    title: "FreshNest Cleaning — Service Business Website",
+    body: "A concept website for a fictional home-cleaning business: services, process, FAQs and a demo quote request form.",
+    to: "/freshnest",
+    live: true,
   },
   {
     title: "Lead Inquiry Automation",

@@ -38,7 +38,7 @@ const focusAreas = [
   {
     icon: Brain,
     title: "Aspiring AI Professional",
-    body: "Learning AI concepts and exploring their practical applications — presented here as a learning interest, not an established service.",
+    body: "Learning AI concepts and exploring their practical applications.",
   },
 ];
 

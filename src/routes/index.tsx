@@ -46,7 +46,7 @@ const focusAreas = [
   },
 ];
 
-const planned = ["Restaurant Website", "Marketing Agency Website"];
+const planned = ["Marketing Agency Website"];
 
 function HeroVisual() {
   const steps = ["Research", "Outreach", "Connect"];
@@ -211,6 +211,15 @@ function Index() {
               View Demo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
+          </article>
+          <article className="mt-6 grid overflow-hidden rounded-xl border bg-card shadow-soft md:grid-cols-2">
+            <img src="/restaurant/hero.jpg" alt="Food photography from the Saffron Table restaurant concept" className="h-64 w-full object-cover md:h-full" loading="lazy" />
+            <div className="p-8 md:p-10">
+              <span className="inline-flex rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">Concept Project</span>
+              <h3 className="mt-5 text-2xl font-bold">Saffron Table</h3>
+              <p className="mt-3 leading-relaxed text-muted-foreground">A restaurant website concept featuring an interactive menu, dish previews, and a table-reservation demo.</p>
+              <Link to="/restaurant" className="group mt-7 inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent-foreground">View Demo <ArrowRight className="h-4 w-4" /></Link>
+            </div>
           </article>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {planned.map((t) => (

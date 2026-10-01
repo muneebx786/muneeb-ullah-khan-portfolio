@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FreshnestRouteImport } from './routes/freshnest'
+import { Route as RestaurantRouteImport } from './routes/restaurant'
 import { Route as StoreRouteImport } from './routes/store'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const FreshnestRoute = FreshnestRouteImport.update({
   path: '/freshnest',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RestaurantRoute = RestaurantRouteImport.update({
+  id: '/restaurant',
+  path: '/restaurant',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StoreRoute = StoreRouteImport.update({
   id: '/store',
   path: '/store',
@@ -32,30 +38,34 @@ const StoreRoute = StoreRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/freshnest': typeof FreshnestRoute
+  '/restaurant': typeof RestaurantRoute
   '/store': typeof StoreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/freshnest': typeof FreshnestRoute
+  '/restaurant': typeof RestaurantRoute
   '/store': typeof StoreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/freshnest': typeof FreshnestRoute
+  '/restaurant': typeof RestaurantRoute
   '/store': typeof StoreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/freshnest' | '/store'
+  fullPaths: '/' | '/freshnest' | '/restaurant' | '/store'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/freshnest' | '/store'
-  id: '__root__' | '/' | '/freshnest' | '/store'
+  to: '/' | '/freshnest' | '/restaurant' | '/store'
+  id: '__root__' | '/' | '/freshnest' | '/restaurant' | '/store'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FreshnestRoute: typeof FreshnestRoute
+  RestaurantRoute: typeof RestaurantRoute
   StoreRoute: typeof StoreRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FreshnestRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/restaurant': {
+      id: '/restaurant'
+      path: '/restaurant'
+      fullPath: '/restaurant'
+      preLoaderRoute: typeof RestaurantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/store': {
       id: '/store'
       path: '/store'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FreshnestRoute: FreshnestRoute,
+  RestaurantRoute: RestaurantRoute,
   StoreRoute: StoreRoute,
 }
 export const routeTree = rootRouteImport

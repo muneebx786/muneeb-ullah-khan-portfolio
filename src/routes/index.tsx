@@ -129,14 +129,15 @@ function Index() {
           <SectionHeading eyebrow="About" title="A practical approach to learning" />
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              I&rsquo;m interested in how websites, AI and automation can make everyday business tasks
-              simpler. I learn by building real projects &mdash; structuring layouts, writing clear
-              content, and checking how pages work on phones and large screens.
+              I&rsquo;m focused on web development and client acquisition. I learn by building real
+              projects &mdash; structuring layouts, writing clear content, and checking how pages work on
+              phones and large screens.
             </p>
             <p>
-              I&rsquo;m also exploring AI integrations and automated workflows, and studying lead
-              generation: understanding which businesses need a stronger online presence and how to
-              reach them with relevant, personal outreach. This site documents that work as it develops.
+              I&rsquo;m also studying client acquisition and lead generation: understanding which
+              businesses need a stronger online presence and how to reach them with relevant, personal
+              outreach. Alongside this, I&rsquo;m learning about artificial intelligence and how its
+              ideas can be applied in practice. This site documents that work as it develops.
             </p>
           </div>
         </div>

@@ -63,6 +63,33 @@
   --gradient-accent: linear-gradient(135deg, oklch(0.54 0.21 260), oklch(0.66 0.16 235));
 }
 
+/* Scoped theme for the FreshNest Cleaning concept project */
+.theme-freshnest {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.2 0.03 155);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.03 155);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.03 155);
+  --primary: oklch(0.42 0.11 158);
+  --primary-foreground: oklch(0.99 0.01 150);
+  --secondary: oklch(0.96 0.02 155);
+  --secondary-foreground: oklch(0.28 0.06 158);
+  --muted: oklch(0.96 0.015 155);
+  --muted-foreground: oklch(0.5 0.025 158);
+  --accent: oklch(0.94 0.045 158);
+  --accent-foreground: oklch(0.36 0.1 158);
+  --border: oklch(0.91 0.015 155);
+  --input: oklch(0.91 0.015 155);
+  --ring: oklch(0.42 0.11 158);
+  --surface: oklch(0.98 0.015 155);
+  --surface-foreground: oklch(0.2 0.03 155);
+  --shadow-soft: 0 1px 2px oklch(0.2 0.03 155 / 0.05), 0 14px 36px -14px oklch(0.42 0.11 158 / 0.2);
+  --gradient-accent: linear-gradient(135deg, oklch(0.42 0.11 158), oklch(0.6 0.13 150));
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

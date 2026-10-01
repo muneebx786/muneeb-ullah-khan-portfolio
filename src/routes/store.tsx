@@ -144,7 +144,7 @@ function StorePage() {
     () =>
       products
         .filter((p) => (cart[p.id] ?? 0) > 0)
-        .map((p) => ({ product: p, qty: cart[p.id] })),
+        .map((p) => ({ product: p, qty: cart[p.id]! })),
     [cart],
   );
   const itemCount = lines.reduce((sum, l) => sum + l.qty, 0);

@@ -46,7 +46,7 @@ const focusAreas = [
   },
 ];
 
-const planned = ["E-commerce Store", "Restaurant Website", "Marketing Agency Website"];
+const planned = ["Restaurant Website", "Marketing Agency Website"];
 
 function HeroVisual() {
   const steps = ["Research", "Outreach", "Connect"];
@@ -191,6 +191,26 @@ function Index() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
+          </article>
+          <article className="mt-6 rounded-xl border bg-card p-8 shadow-soft md:p-10">
+            <span className="inline-flex w-fit rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
+              Concept Project
+            </span>
+            <h3 className="mt-5 text-2xl font-bold">NOVA Essentials — E-commerce Store</h3>
+            <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
+              An interactive storefront demo with category filters, product details, and a shopping
+              cart.
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Portfolio concept — no real purchases; the cart runs entirely in the browser.
+            </p>
+            <Link
+              to="/store"
+              className="group mt-7 inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent-foreground"
+            >
+              View Demo
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </article>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {planned.map((t) => (

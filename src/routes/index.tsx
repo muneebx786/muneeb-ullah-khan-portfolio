@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Code2, Bot, Target, ArrowRight } from "lucide-react";
 import { Nav, scrollToSection } from "@/components/portfolio/Nav";
 

@@ -444,7 +444,7 @@ function FreshNestPage() {
   return (
     <div className="theme-freshnest min-h-screen font-sans" id="top">
       <div className="border-b bg-surface px-6 py-2.5">
-        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 text-center text-xs text-muted-foreground sm:text-sm">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-1 text-center text-xs text-muted-foreground sm:flex-row sm:gap-2 sm:text-sm">
           <span>Concept project &mdash; fictional business, built for portfolio demonstration.</span>
           <Link
             to="/"

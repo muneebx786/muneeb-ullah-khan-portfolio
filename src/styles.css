@@ -110,6 +110,32 @@
   }
 }
 
+/* Scoped theme for the NOVA Essentials store concept project */
+.theme-store {
+  --background: oklch(0.965 0.015 85);
+  --foreground: oklch(0.27 0.02 60);
+  --card: oklch(0.985 0.01 85);
+  --card-foreground: oklch(0.27 0.02 60);
+  --popover: oklch(0.985 0.01 85);
+  --popover-foreground: oklch(0.27 0.02 60);
+  --primary: oklch(0.58 0.16 50);
+  --primary-foreground: oklch(0.98 0.01 85);
+  --secondary: oklch(0.93 0.02 80);
+  --secondary-foreground: oklch(0.32 0.03 60);
+  --muted: oklch(0.93 0.02 80);
+  --muted-foreground: oklch(0.48 0.03 60);
+  --accent: oklch(0.92 0.045 70);
+  --accent-foreground: oklch(0.5 0.13 50);
+  --border: oklch(0.88 0.02 75);
+  --input: oklch(0.88 0.02 75);
+  --ring: oklch(0.58 0.16 50);
+  --surface: oklch(0.95 0.018 82);
+  --surface-foreground: oklch(0.27 0.02 60);
+  --shadow-soft: 0 1px 2px oklch(0.27 0.02 60 / 0.05), 0 12px 30px -14px oklch(0.27 0.02 60 / 0.18);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
 /* Scoped theme for the FreshNest Cleaning concept project */
 .theme-freshnest {
   --background: oklch(1 0 0);

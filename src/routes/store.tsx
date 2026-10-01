@@ -64,13 +64,13 @@ const products: Product[] = [
     image: crossbodyImg,
   },
   {
-    id: "weekender",
-    name: "Weekender Sling Pouch",
-    category: "Bags",
-    price: 39,
+    id: "cap",
+    name: "Weekend Cotton Cap",
+    category: "Accessories",
+    price: 28,
     description:
-      "A lightweight sling pouch that keeps a phone, cards, and keys close on busy days. Illustrative sample product.",
-    image: toteImg,
+      "A soft cotton cap with an adjustable strap in a neutral tone that goes with everything. Illustrative sample product.",
+    image: capImg,
   },
   {
     id: "classic-watch",
@@ -109,12 +109,12 @@ const products: Product[] = [
     image: sunglassesImg,
   },
   {
-    id: "belt-cap",
-    name: "Leather Belt & Cap Set",
+    id: "belt",
+    name: "Stitched Leather Belt",
     category: "Accessories",
-    price: 62,
+    price: 42,
     description:
-      "A matched everyday set: a stitched leather belt and a soft cotton cap in neutral tones. Illustrative sample product.",
+      "A classic stitched belt in warm tan with a brushed-metal buckle — an everyday staple. Illustrative sample product.",
     image: beltImg,
   },
 ];

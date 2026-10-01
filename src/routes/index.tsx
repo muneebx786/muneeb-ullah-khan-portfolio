@@ -29,15 +29,23 @@ export const Route = createFileRoute("/")({
 });
 
 const focusAreas = [
-  { icon: Code2, title: "Web Development", body: "Building responsive websites and landing pages with clear structure and readable layouts." },
-  { icon: Workflow, title: "AI & Automation", body: "Exploring AI integrations and workflows that take over repetitive, manual steps." },
-  { icon: Target, title: "Client Acquisition & Lead Generation", body: "Researching prospects and drafting personalised, relevant outreach." },
+  { icon: Code2, title: "Web Development", body: "Creating responsive websites and landing pages." },
+  {
+    icon: Target,
+    title: "Client Acquisition & Lead Generation",
+    body: "Researching potential clients and developing personalised outreach strategies.",
+  },
+  {
+    icon: Brain,
+    title: "Aspiring AI Professional",
+    body: "Learning AI concepts and exploring their practical applications — presented here as a learning interest, not an established service.",
+  },
 ];
 
-const planned = ["E-commerce Store", "Restaurant Website", "Marketing Agency Website", "AI Inquiry Assistant"];
+const planned = ["E-commerce Store", "Restaurant Website", "Marketing Agency Website"];
 
 function HeroVisual() {
-  const steps = ["Inquiry", "Organise", "Respond"];
+  const steps = ["Research", "Outreach", "Connect"];
   return (
     <div aria-hidden className="relative mx-auto w-full max-w-md">
       <div className="rounded-xl border border-navy-line bg-navy p-4 shadow-soft">

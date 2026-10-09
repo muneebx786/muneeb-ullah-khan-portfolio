@@ -162,6 +162,19 @@ function Index() {
       <section id="projects" className="scroll-mt-14 border-t px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionHeading eyebrow="Projects" title="Selected Projects" />
+          <article className="mt-12 grid overflow-hidden rounded-xl border bg-navy text-navy-foreground shadow-soft md:grid-cols-2">
+            <div className="flex flex-col justify-center p-8 md:p-10">
+              <span className="w-fit rounded-full border border-navy-line px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-light">AI Automation · Portfolio Project</span>
+              <h3 className="mt-5 text-2xl font-bold">AI Inquiry Assistant</h3>
+              <p className="mt-3 leading-relaxed text-navy-muted">An n8n and Gemini workflow that summarises project inquiries, identifies missing details, and prepares reply drafts for human review.</p>
+              <p className="mt-3 text-sm text-navy-muted">Recorded working demo with fictional data. No automated client messages.</p>
+              <Link to="/ai-assistant" className="mt-7 inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-4">View Project &amp; Demo <ArrowRight size={16} /></Link>
+            </div>
+            <div aria-hidden="true" className="flex flex-col justify-center gap-3 border-navy-line bg-white/5 p-8 md:border-l md:p-10">
+              <p className="mb-2 text-xs uppercase tracking-widest text-teal-light">One inquiry. A clearer next step.</p>
+              {["01 / Inquiry summary", "02 / Service category", "03 / Missing information", "04 / Suggested reply"].map(t => <div key={t} className="rounded-lg border border-navy-line px-5 py-4 text-sm">{t}</div>)}
+            </div>
+          </article>
           <article className="mt-12 grid overflow-hidden rounded-xl border bg-card shadow-soft md:grid-cols-2">
             <div className="border-b bg-muted md:border-b-0 md:border-r">
               <img
